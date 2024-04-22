@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Kinobilletter</title>
+</head>
+<body onload="leggTilHTML()">
+<div>
+    <div class="col-md-3">
+        <script src="script.js"></script>
+        <h1>Bestilling av kinobilletter</h1>
+
+        <label for="filmer">Velg film: </label>
+        <select id="filmer" onchange="erFyltFilm()" class="form-control" style="width: 150px">
+            <option value="default">Velg film</option>
+            <option value="Dune">Dune</option>
+            <option value="Spider-Man">Spider-Man</option>
+            <option value="The Lord of The Rings">The Lord of the Rings</option>
+            <option value="La La Land">La La Land</option>
+        </select>
+        <span id="filmError" style="color: red;"></span>
+
+        <br>
+        <br>
+        <label for="antall">Antall &nbsp;</label>
+        <input type="number" id="antall" min="1" style="width: 60px" onchange="erTom('antall', 'antallError')" class="form-control">
+        <span id="antallError" style="color: red;"></span>
+
+        <br>
+        <br>
+
+        <label for="fornavn">Fornavn &nbsp; &nbsp;</label>
+        <input type="text" id="fornavn" onchange="sjekkNavn('fornavn', 'fornavnError')" class="form-control" style="width: 200px">
+        <span id="fornavnError" style="color: red;"></span>
+        <br>
+
+        <label for="etternavn">Etternavn &nbsp;</label>
+        <input type="text" id="etternavn" onchange="sjekkNavn('etternavn', 'etternavnError')" class="form-control" style="width: 200px">
+        <span id="etternavnError" style="color: red;"></span>
+        <br>
+
+        <label for="tlfnr">Telefonnr &nbsp;</label>
+        <input type="text" id="tlfnr" onchange="sjekkTlf()" class="form-control" style="width: 200px">
+        <span id="tlfError" style="color: red;"></span>
+        <br>
+
+        <label for="epost">Epost&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="email" id="epost" onchange="sjekkEpost()" class="form-control" style="width: 200px">
+        <span id="epostError" style="color: red;"></span>
+        <br>
+
+        <button onclick="leggTilBillett()" class="btn btn-primary">Kjøp billett</button>
+        <br>
+    </div>
+    <div class="col-md-8">
+        <h2>Alle billetter</h2>
+        <button onclick="leggTilHTML()">Last inn billetter</button>
+        <table id="billetter" class="table"></table>
+
+        <button onclick="slettAlleBilletter()" class="btn btn-danger">Slett alle billettene</button>
+
+        <script src="script.js"></script>
+    </div>
+</div>
+</body>
+</html>
