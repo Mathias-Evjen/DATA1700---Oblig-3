@@ -4,7 +4,7 @@ OsloMet brukernavn: maevj2592
 
 GitHub brukernavn: Mathias-Evjen
 
-Github repo URL: https://github.com/Mathias-Evjen/DATA1700---Oblig-3/tree/master
+Github repo URL: https://github.com/Mathias-Evjen/DATA1700---Oblig-3
 
 Fullt navn: Mathias Evjen
 
